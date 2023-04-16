@@ -26,8 +26,7 @@ char** shell_split_line(char *line, int line_len)
 	{
 		Array_of_tokens[tokens_len] = token;
 		
-		tokens_len++;
-		
+		++tokens_len;
 		token = strtok(NULL, delimiters);
 
         

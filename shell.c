@@ -26,7 +26,7 @@ int main(int ac __attribute__((unused)), char **av __attribute__((unused)))
 
 		tokens = shell_split_line(line, line_len);
 
-		printf("spilt it baby:%s", *tokens);
+		printf("spilt it baby:%s", tokens[2]);
 		/*if (tokens[0] != NULL)
 		{
 			shell_exec(tokens);
