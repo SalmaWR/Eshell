@@ -2,11 +2,13 @@
 #include <stdio.h>
 #include <unistd.h>
 
-/*
+/**
+ * main - Entry point.
  *
+ * @ac: arguments count.
+ * @av: array of arguments passed to program.
  *
- *@ac : arguments count
- *@av : array of arguments passed to program
+ * Return: 0 on success.
  */
 
 int main(int ac __attribute__((unused)), char **av __attribute__((unused)))
@@ -26,16 +28,14 @@ int main(int ac __attribute__((unused)), char **av __attribute__((unused)))
 
 		tokens = shell_split_line(line, line_len);
 
-		printf("spilt it baby:%s", tokens[2]);
-		/*if (tokens[0] != NULL)
+		if (tokens[0] != NULL)
 		{
 			shell_exec(tokens);
 		}
 
 		free(tokens);
-		free(line);*/
+		free(line);
 	}
 
 	return (0);
-
 }

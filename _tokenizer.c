@@ -1,7 +1,16 @@
 #include"shell.h"
 #include<string.h>
 
-char** shell_split_line(char *line, int line_len) 
+/**
+ * shell_split_line - Split a line into tokens.
+ *
+ * @line: The line to split.
+ * @line_len: The length of the line.
+ *
+ * Return: An array of tokens.
+ */
+
+char **shell_split_line(char *line, int line_len) 
 {	
 	char **Array_of_tokens = NULL;
 	char *token = NULL;
@@ -12,10 +21,10 @@ char** shell_split_line(char *line, int line_len)
 	line_cpy = malloc(sizeof(char) * line_len);
 
 	if (!line_cpy)
-		{
-			perror("shell: Allocation error");
-			return (NULL);
-		}
+	{
+		perror("shell: Allocation error");
+		return (NULL);
+	}
 
 	strcpy(line_cpy, line);
 
@@ -29,11 +38,9 @@ char** shell_split_line(char *line, int line_len)
 		++tokens_len;
 		token = strtok(NULL, delimiters);
 
-        
-
 	}
 	
 	Array_of_tokens[tokens_len] = NULL;
 	
-	return(Array_of_tokens);
+	return (Array_of_tokens);
 }
