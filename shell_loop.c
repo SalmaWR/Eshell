@@ -1,17 +1,6 @@
 #include "shell.h"
-#include <stdio.h>
-#include <unistd.h>
 
-/**
- * main - Entry point.
- *
- * @ac: arguments count.
- * @av: array of arguments passed to program.
- *
- * Return: 0 on success.
- */
-
-int main(int ac __attribute__((unused)), char **av __attribute__((unused)))
+void shell_loop(void)
 {
 	char *line = NULL;
 	char **tokens = NULL;
@@ -37,5 +26,4 @@ int main(int ac __attribute__((unused)), char **av __attribute__((unused)))
 		free(line);
 	}
 
-  return EXIT_SUCCESS;
 }
